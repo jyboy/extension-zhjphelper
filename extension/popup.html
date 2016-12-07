@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>智慧驾培助手</title>
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/popup.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="header">
+                    <div class="left">
+                        <img src="images/icon_128.png" alt="智慧驾培助手" />
+                    </div>
+                    <div class="right">
+                        <h1 class="title">智慧驾培助手<span class="version">1.0</span></h1>
+                        <span class="slogan">教练预约神器</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="tabs-content">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">首页</a></li>
+                        <li role="presentation"><a href="#setting" role="tab" data-toggle="tab">设置</a></li>
+                        <li role="presentation"><a href="#help" role="tab" data-toggle="tab">帮助</a></li>
+                        <li role="presentation"><a href="#tip" role="tab" data-toggle="tab">打赏</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="home">
+                            <legend>当前设置</legend>
+                            <div class="form-group">
+                                <span class="col-md-2 label-title"><strong>预约日期</strong></span>
+                                <span class="col-md-10" id="reservationDate">7天后</span>
+                            </div>
+                            <div class="form-group">
+                                <span class="col-md-2 label-title"><strong>第一教练</strong></span>
+                                <span class="col-md-10" id="firstCoach">未填写</span>
+                            </div>
+                            <div class="form-group">
+                                <span class="col-md-2 label-title"><strong>第二教练</strong></span>
+                                <span class="col-md-10" id="secondCoach">未填写</span>
+                            </div>
+                            <div class="form-group">
+                                <span class="col-md-2 label-title"><strong>第一时段</strong></span>
+                                <span class="col-md-10" id="firstTime">未选择</span>
+                            </div>
+                            <div class="form-group">
+                                <span class="col-md-2 label-title"><strong>第二时段</strong></span>
+                                <span class="col-md-10" id="secondTime">未选择</span>
+                            </div>
+                            <div class="form-group">
+                                <span class="col-md-2 label-title"><strong>双&nbsp;&nbsp;时&nbsp;&nbsp;段</strong></span>
+                                <span class="col-md-10" id="canTwoTime">否</span>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="button" class="btn btn-primary btn-long" id="startReservationBtn">开始预约</button>
+                                <div class="help-block"></div>
+                            </div>
+                            <legend class="wechat-title">微信公众号</legend>
+                            <div class="form-group wechat-wrap">
+                                <ul class="left">
+                                    <li><strong>*</strong>&nbsp;&nbsp;及时获取下一版本更新，抢教练更快速更稳定</li>
+                                    <li><strong>*</strong>&nbsp;&nbsp;在使用过程中有任何问题随时反馈，使插件更方便更强大</li>
+                                    <li><strong>*</strong>&nbsp;&nbsp;不定期获取各大驾校人气教练排名，帮您选择最合适的教练</li>
+                                </ul>
+                                <div class="right">
+                                    <img src="images/qrcode_wechat.jpg" alt="智慧驾培助手" />
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="setting">
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="reservation_date">预约日期</label>
+                                <div class="col-md-10">
+                                    <select id="reservation_date" name="reservation_date" class="form-control">
+                                        <option value="7" selected>7天后</option>
+                                        <option value="6">6天后</option>
+                                        <option value="5">5天后</option>
+                                        <option value="4">4天后</option>
+                                        <option value="3">大后天</option>
+                                        <option value="2">后天</option>
+                                        <option value="1">明天</option>
+                                    </select>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="first_coach">第一教练 *</label>
+                                <div class="col-md-10">
+                                    <input name="first_coach" type="text" class="form-control" id="first_coach" placeholder="请填写...">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="second_coach">第二教练</label>
+                                <div class="col-md-10">
+                                    <input name="second_coach" type="text" class="form-control" id="second_coach" placeholder="请填写...">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="first_time">第一时段 *</label>
+                                <div class="col-md-10">
+                                    <select id="first_time" name="first_time" class="form-control">
+                                        <option value="" selected>请选择...</option>
+                                        <option value="07:00 ~ 09:00">07:00 ~ 09:00</option>
+                                        <option value="09:00 ~ 11:00">09:00 ~ 11:00</option>
+                                        <option value="12:00 ~ 14:00">12:00 ~ 14:00</option>
+                                        <option value="14:00 ~ 16:00">14:00 ~ 16:00</option>
+                                        <option value="16:00 ~ 18:00">16:00 ~ 18:00</option>
+                                    </select>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" for="second_time">第二时段</label>
+                                <div class="col-md-10">
+                                    <select id="second_time" name="second_time" class="form-control">
+                                        <option value="" selected>请选择...</option>
+                                        <option value="07:00 ~ 09:00">07:00 ~ 09:00</option>
+                                        <option value="09:00 ~ 11:00">09:00 ~ 11:00</option>
+                                        <option value="12:00 ~ 14:00">12:00 ~ 14:00</option>
+                                        <option value="14:00 ~ 16:00">14:00 ~ 16:00</option>
+                                        <option value="16:00 ~ 18:00">16:00 ~ 18:00</option>
+                                    </select>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="checkbox">
+                                <div class="col-md-10">
+                                    <label>
+                                        <input type="checkbox" id="can_two_time"> 第一时段 + 第二时段
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="button" class="btn btn-primary btn-long" id="saveSettingBtn">保存设置</button>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="help">
+                            <p><strong>初次使用</strong></p>
+                            <p>初次使用需要进行设置。</p>
+                            <hr />
+                            <p><strong>设置要点</strong></p>
+                            <p><strong>*</strong>&nbsp;&nbsp;预约日期默认为7天后，可自定义；</p>
+                            <p><strong>*</strong>“第一教练”和“第一时段”为必填项；</p>
+                            <p><strong>*</strong>“第一时段 + 第二时段”指同一教练的“第一时段”和“第二时段”同时存在时都预约。</p>
+                            <hr />
+                            <p><strong>优先顺序</strong></p>
+                            <p>教练优先，即先教练后时段。</p>
+                            <p>1)“第一教练”的“第一时段”</p>
+                            <p>2)“第一教练”的“第二时段”</p>
+                            <p>3)“第二教练”的“第一时段”</p>
+                            <p>4)“第二教练”的“第二时段”</p>
+                            <p><strong>说明</strong>：中间一旦有机会就立即预约并自动停止，最后的结果要么预约上某位教练的某个时段，要么因为两位教练的两个时段碰巧在预约日期当天都没排班而预约失败。</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果同一教练的“第一时段”和“第二时段”同时存在，当不勾选“第一时段 + 第二时段”时，插件只预约“第一时段”，当勾选时，插件会选择都预约。</p>
+                            <hr />
+                            <p><strong>开始预约</strong></p>
+                            <p>1)&nbsp;&nbsp;在教练排班更新时间 (比如20:00) 前几分钟登录智慧驾培管理系统，进入培训预约的教练排班页面；</p>
+                            <p>2)&nbsp;&nbsp;点击“开始预约”，插件开始自动刷新和监测；</p>
+                            <p>3)&nbsp;&nbsp;新的教练排班信息放出时，插件会在0.5s之内自动完成预约过程并通知提醒，然后自动停止。</p>
+                            <p><strong>说明</strong>：插件开始预约后请<strong>尽量避免其他电脑操作</strong>。<strong>插件页面</strong>关闭后，自动预约进程并不会停止，但会影响到预约成功通知提醒的推送。</p>
+                            <hr />
+                            <p>更多帮助，请<strong>扫码关注微信公众号“智慧驾培助手”</strong>。</p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="tip">
+                            <p><strong>如果觉得我的插件对您有用，请随意打赏。</strong></p>
+                            <p>您的支持将鼓励我继续维护和更新！</p>
+                            <div class="text-center alipay-wrap">
+                                <img src="images/qrcode_alipay.jpg" alt="青鸟" />
+                            </div>
+                            <p><strong>打赏者将额外享有以下权益</strong>：</p>
+                            <p>1)&nbsp;&nbsp;<strong>第一时间</strong>获取下一版本更新；</p>
+                            <p>2)&nbsp;&nbsp;<strong>一对一</strong>解答您在使用过程中的<strong>任何疑问</strong>；</p>
+                            <p>3)&nbsp;&nbsp;<strong>实时</strong>获取教练预约<strong>大数据分析详细报表</strong>。</p>
+                            <hr />
+                            <p><strong>注意</strong>：打赏的小伙伴，请<strong>将打赏截图发送到微信公众号</strong>或者<strong>简单在微信公众号里说一下</strong>，这样我就知道是您了。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/js/moment.min.js"></script>
+    <script src="dist/js/popup.min.js"></script>
+</body>
+</html>
