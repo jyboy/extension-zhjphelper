@@ -60,7 +60,7 @@ $(function() {
         switch (request.type) {
             case "-1": {
                 $.ajax({
-                    url: 'http://zhjp.qingniao.tech',
+                    url: 'http://zhjp.atsjtu.cc/',
                     type: "post",
                     dataType: "json",
                     data: {
