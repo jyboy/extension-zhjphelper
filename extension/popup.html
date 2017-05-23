@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>智慧驾培助手</title>
     <link href="lib/css/bootstrap.min.css" rel="stylesheet">
-    <link href="dist/css/popup.min.css" rel="stylesheet" />
+    <link href="dist/css/popup.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="content">
@@ -22,14 +22,14 @@
             </div>
             <div class="row">
                 <div class="tabs-content">
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">首页</a></li>
-                        <li role="presentation"><a href="#setting" role="tab" data-toggle="tab">设置</a></li>
-                        <li role="presentation"><a href="#help" role="tab" data-toggle="tab">帮助</a></li>
-                        <li role="presentation"><a href="#tip" role="tab" data-toggle="tab">打赏</a></li>
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#home" data-toggle="tab">首页</a></li>
+                        <li><a href="#setting" data-toggle="tab">设置</a></li>
+                        <li><a href="#help" data-toggle="tab">帮助</a></li>
+                        <li><a href="#tip" data-toggle="tab">打赏</a></li>
                     </ul>
                     <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="home">
+                        <div class="tab-pane active" id="home">
                             <legend>当前设置</legend>
                             <div class="form-group">
                                 <span class="col-md-2 label-title"><strong>预约日期</strong></span>
@@ -59,19 +59,8 @@
                                 <button type="button" class="btn btn-primary btn-long" id="startReservationBtn">开始预约</button>
                                 <div class="help-block"></div>
                             </div>
-                            <legend class="wechat-title">微信公众号</legend>
-                            <div class="form-group wechat-wrap">
-                                <ul class="left">
-                                    <li><strong>*</strong>&nbsp;&nbsp;及时获取下一版本更新，抢教练更快速更稳定</li>
-                                    <li><strong>*</strong>&nbsp;&nbsp;在使用过程中有任何问题随时反馈，使插件更方便更强大</li>
-                                    <li><strong>*</strong>&nbsp;&nbsp;不定期获取各大驾校人气教练排名，帮您选择最合适的教练</li>
-                                </ul>
-                                <div class="right">
-                                    <img src="images/qrcode_wechat.jpg" alt="智慧驾培助手" />
-                                </div>
-                            </div>
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="setting">
+                        <div class="tab-pane" id="setting">
                             <div class="form-group">
                                 <label class="col-md-2 control-label" for="reservation_date">预约日期</label>
                                 <div class="col-md-10">
@@ -140,7 +129,7 @@
                                 <button type="button" class="btn btn-primary btn-long" id="saveSettingBtn">保存设置</button>
                             </div>
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="help">
+                        <div class="tab-pane" id="help">
                             <p><strong>初次使用</strong></p>
                             <p>初次使用需要进行设置。</p>
                             <hr />
@@ -163,21 +152,13 @@
                             <p>2)&nbsp;&nbsp;点击“开始预约”，插件开始自动刷新和监测；</p>
                             <p>3)&nbsp;&nbsp;新的教练排班信息放出时，插件会在0.5s之内自动完成预约过程并通知提醒，然后自动停止。</p>
                             <p><strong>说明</strong>：插件开始预约后请<strong>尽量避免其他电脑操作</strong>。<strong>插件页面</strong>关闭后，自动预约进程并不会停止，但会影响到预约成功通知提醒的推送。</p>
-                            <hr />
-                            <p>更多帮助，请<strong>扫码关注微信公众号“智慧驾培助手”</strong>。</p>
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="tip">
+                        <div class="tab-pane" id="tip">
                             <p><strong>如果觉得我的插件对您有用，请随意打赏。</strong></p>
                             <p>您的支持将鼓励我继续维护和更新！</p>
                             <div class="text-center alipay-wrap">
                                 <img src="images/qrcode_alipay.jpg" alt="青鸟" />
                             </div>
-                            <p><strong>打赏者将额外享有以下权益</strong>：</p>
-                            <p>1)&nbsp;&nbsp;<strong>第一时间</strong>获取下一版本更新；</p>
-                            <p>2)&nbsp;&nbsp;<strong>一对一</strong>解答您在使用过程中的<strong>任何疑问</strong>；</p>
-                            <p>3)&nbsp;&nbsp;<strong>实时</strong>获取教练预约<strong>大数据分析详细报表</strong>。</p>
-                            <hr />
-                            <p><strong>注意</strong>：打赏的小伙伴，请<strong>将打赏截图发送到微信公众号</strong>或者<strong>简单在微信公众号里说一下</strong>，这样我就知道是您了。</p>
                         </div>
                     </div>
                 </div>
