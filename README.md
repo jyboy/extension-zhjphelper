@@ -4,11 +4,11 @@
 
 ## Screenshots
 
-![zhjphelper-screenshot](https://raw.githubusercontent.com/jyboy/extension-zhjphelper/master/screenshots/screenshot-1.jpg)
+![zhjphelper-screenshot](https://raw.githubusercontent.com/jyboy/extension-zhjphelper/master/screenshots/home.png)
 
-![zhjphelper-screenshot](https://raw.githubusercontent.com/jyboy/extension-zhjphelper/master/screenshots/screenshot-2.jpg)
+![zhjphelper-screenshot](https://raw.githubusercontent.com/jyboy/extension-zhjphelper/master/screenshots/setting.png)
 
-![zhjphelper-screenshot](https://raw.githubusercontent.com/jyboy/extension-zhjphelper/master/screenshots/screenshot-3.jpg)
+![zhjphelper-screenshot](https://raw.githubusercontent.com/jyboy/extension-zhjphelper/master/screenshots/help.png)
 
 ## Support
 
