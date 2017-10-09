@@ -18,7 +18,6 @@
         "activeTab",
         "notifications",
         "storage",
-        "http://zhjp.sz-its.cn/",
-        "http://zhjp.atsjtu.cc/"
+        "http://zhjp.sz-its.cn/"
     ]
 }

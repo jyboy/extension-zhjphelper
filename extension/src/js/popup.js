@@ -59,23 +59,6 @@ $(function() {
         var response = {};
         switch (request.type) {
             case "-1": {
-                $.ajax({
-                    url: 'http://zhjp.atsjtu.cc/',
-                    type: "post",
-                    dataType: "json",
-                    data: {
-                        drivingSchool: request.message,
-                        reservationDate: moment().add(reservationDate, 'days').format('YYYY-MM-DD'),
-                        firstCoach: firstCoach,
-                        secondCoach: secondCoach,
-                        firstTime: firstTime,
-                        secondTime: secondTime,
-                        canTwoTime: canTwoTime ? 1 : 0
-                    },
-                    success: function(data) {
-
-                    }
-                });
                 response.type = "-1";
                 response.status = "success";
                 break;

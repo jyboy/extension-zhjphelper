@@ -37,25 +37,22 @@ if ($("iframe[name='培训预约']").length) {
             count++;
             if (count == 6) reserveCoach();
         });
-        sendMessageRequest("-1", $("#userName").text().split(" - ")[0]);
+        sendMessageRequest("-1");
     } else {
-        sendMessageRequest("1", "");
+        sendMessageRequest("1");
     }
 } else {
-    sendMessageRequest("0", "");
+    sendMessageRequest("0");
 }
 
-function sendMessageRequest(type, message) {
+function sendMessageRequest(type) {
     var isRunning = false;
     if (type == "-1") {
         isRunning = true;
     }
     chrome.storage.local.set({'isRunning': isRunning}, function() {
         chrome.extension.sendRequest({
-            type: type,
-            message: message
-        }, function(response) {
-
+            type: type
         });
     });
 }
@@ -75,7 +72,7 @@ function reserveCoach() {
     var int = setInterval(function() {
         $body = $("iframe[name='培训预约']").contents().find("body");
         $body.find(".dhx_cal_today_button").click();
-        for (var d = 0; d < reservationDate; d++) { // dev
+        for (var d = 0; d < reservationDate; d++) {
             $body.find(".dhx_cal_next_button").click();
         }
         var $tr = $body.find("#CoachScheduler").children(".dhx_cal_data").children("table").children("tbody").children("tr");
@@ -145,9 +142,9 @@ function reserveCoach() {
                 });
             }
             if (hasFirstCoachReserved || hasSecondCoachReserved) {
-                sendMessageRequest("3", "");
+                sendMessageRequest("3");
             } else {
-                sendMessageRequest("2", "");
+                sendMessageRequest("2");
             }
             hasReserved = true;
         }

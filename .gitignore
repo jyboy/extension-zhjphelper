@@ -5,5 +5,3 @@ node_modules
 logs
 *.log
 npm-debug.log*
-
-zhjp.sqlite3

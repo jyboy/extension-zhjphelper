@@ -1,15 +1,13 @@
 {
     "name": "zhjphelper",
-    "version": "1.0.0",
-    "description": "a browser extension which can help people make an appointment with driving coaches in Suzhou Wisdom Driving Training Management System",
+    "version": "1.1.0",
+    "description": "a browser extension that can help people make an appointment with driving coaches in Wisdom Driving Training Management System",
     "repository": {
         "type": "git",
         "url": "git@github.com:jyboy/extension-zhjphelper.git"
     },
     "license": "MIT",
     "keywords": [
-        "node",
-        "express",
         "html",
         "javascript"
     ]
